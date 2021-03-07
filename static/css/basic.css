@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+. {
+    overflow: hidden;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+
+ai {
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    background-color: #01a2e5;
+    background: -webkit-linear-gradient(left, #01a2e5, #f8a74b);
+    background: -o-linear-gradient(right, #01a2e5, #f8a74b);
+    background: -moz-linear-gradient(right, #01a2e5, #f8a74b);
+    background: linear-gradient(to right, #01a2e5, #f8a74b);
+}
+
+.articleTitle {
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    border-bottom: #f4f5f8 2px solid;
+    position: relative;
+    font-size: 18px;
+    font-family: "Nirmala UI";
+}
