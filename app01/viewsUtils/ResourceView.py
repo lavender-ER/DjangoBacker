@@ -65,7 +65,6 @@ class ResourceViewSet(ModelViewSet):
         if file and desc and name and uid and type and size and uploader:
             filetype = os.path.splitext(str(file))[1]
             filename = uid + filetype
-            logging.basicConfig(level=logging.INFO, stream=sys.stdout)
             client = self.loginCos()
             response = client.put_object(
                 Bucket=self.Bucket,

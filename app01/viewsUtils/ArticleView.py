@@ -75,7 +75,7 @@ class ArticleViewSet(ModelViewSet):
         if id:
             obj = models.Algorithm.objects.filter(id=id).first()
             if obj:
-                print(obj)
+                # print(obj)
                 data = models.Article.objects.filter(algorithm=obj.name)
                 ser = ArticleModelSerializer(instance=data, many=True)
                 return JsonResponse({
@@ -137,7 +137,7 @@ class ArticleViewSet(ModelViewSet):
         content = request.data.get('content', None)
         author_id = request.data.get('author_id', None)
         request.data['date'] = datetime.now()
-        print(content)
+        # print(content)
         if content and author_id:
             serializer = ArticleModelSerializer(data=request.data)
             if serializer.is_valid(raise_exception=True):
